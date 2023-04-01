@@ -21,7 +21,7 @@ print('Olá, tudo bem? Vamos começar com as perguntas então!')
 time.sleep(3)
 valorCasa = int(input('Qual é o preço da casa?\nR: '))
 valorSalario = float(input('Qual é o seu salário?\nR: '))
-tempoPagamento = int(input('Por quanto tempo em anos você quer pagar?\nR: ')).pu
+tempoPagamento = int(input('Por quanto tempo em anos você quer pagar?\nR: '))
 # transformar int em string para operacionar
 strvalorCasa = str(valorCasa)
 strvalorSalario = str(valorSalario)
