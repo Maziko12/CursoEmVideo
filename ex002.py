@@ -1,0 +1,5 @@
+print('Olá, tudo bem? Poderia me passar suas informações para teste desse novo programa?')
+dia = input('Vamos começar com o seu dia de nascimemento: ')
+mes = input('Muito bem! Agora vamos com o seu mês de nascimento: ')
+ano = input('Certo! Agora só falta o seu ano de nascimento: ')
+print(f'Você nasceu no {dia} de {mes} de {ano} . Correto?')

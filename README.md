@@ -1,0 +1,2 @@
+# PycharmProjects
+Série de exercicios

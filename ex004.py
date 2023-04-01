@@ -1,0 +1,8 @@
+n = input('Digite um caractere: ')
+print('O seu caractere é número inteiro?\nR: ', n.isnumeric())
+print('O seu caractere está em minúsculo?\nR: ', n.islower())
+print('O seu caractere está captalizado?\nR: ', n.istitle())
+print('O seu caractere está em maíusculo?\nR: ', n.isupper())
+print('O seu caractere tem espaços?\nR: ', n.isspace())
+print('O seu caractere é alfanumérico?\nR: ', n.isalnum())
+print('O seu caractere é alfabético?\nR: ', n.isalpha())
