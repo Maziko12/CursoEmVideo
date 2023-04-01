@@ -19,13 +19,16 @@ time.sleep(0.3)
 # Atendente se apresentando!
 print('Olá, tudo bem? Vamos começar com as perguntas então!')
 time.sleep(3)
-valorCasa = int(input('Qual é o preço da casa?\nR: '))
-valorSalario = float(input('Qual é o seu salário?\nR: '))
+valorCasa = str(input('Qual é o preço da casa?\nR: '))
+valorSalario = str(input('Qual é o seu salário?\nR: '))
 tempoPagamento = int(input('Por quanto tempo em anos você quer pagar?\nR: '))
 # transformar int em string para operacionar
-strvalorCasa = str(valorCasa)
-strvalorSalario = str(valorSalario)
+if valorCasa and valorSalario == string.punctuation:
+    valorCasa = string.punctuation(',', '.')
+    ValorSalario = string.punctuation(',', '.')
 # Trabalhar nelas mais pra frente, para tirar a vírgula e pontuação
+intvalorCasa = int(valorCasa)
+intvalorSalario = int(valorSalario)
 # Cálculando a quantidade de mesês por ano eu terei
 Meses = tempoPagamento * 12
 # Dando um tempo para o usuário esperar...
@@ -46,7 +49,7 @@ print('.')
 time.sleep(0.5)
 print('.')
 # Descobrindo quantos % vou gastar por mês para pagar em X anos.
-porcentagem = valorCasa / Meses * 100 / valorSalario
+porcentagem = intvalorCasa / Meses * 100 / intvalorSalario
 # Decidindo se o valor é aceitável (inferior á 30% ou não)
 print('----------------')
 print('Muito bem.')
@@ -69,7 +72,6 @@ if asking == 'sim'.lower():
 elif asking in 'Sim Talvez Não'.lower():
     time.sleep(1)
     print('Entendo...boas compras e volte sempre!')
-
 print('.')
 time.sleep(3)
 print('FIM!')
