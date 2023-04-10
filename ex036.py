@@ -76,3 +76,60 @@ print('.')
 time.sleep(3)
 print('FIM!')
 print('=========================')
+#
+import time
+import os
+
+
+def limpar():
+    if os.name == 'nt': #Se for NT que dizer que e windows
+        os.system('cls')
+    else: # Linux/MacOS
+        os.system('clear')
+
+print("Caro usuário, devido ao servidor estar lotado de requisições, precisaremos que espere alguns segundos, por favor, seja paciente...")
+time.sleep(1.5)
+limpar()
+print("Olá, tudo bem? Vamos começar com as perguntas então!")
+time.sleep(1.5)
+
+while True:
+    try:
+        valorCasa = float(input("Qual é o preço da casa?\nR: "))
+        valorSalario = float(input("Qual é o seu salário?\nR: "))
+        tempoPagamento = int(input("Por quanto tempo em anos você quer pagar?\nR: "))
+        break
+    except ValueError:
+        print("Por favor, insira um valor numérico válido!")
+
+meses = tempoPagamento * 12
+porcentagem = (valorCasa / meses) * 100 / valorSalario
+
+limpar()
+time.sleep(1.5)
+print("Espere! Fazendo os cálculos...")
+time.sleep(2.5)
+limpar()
+
+if porcentagem >= 31:
+    print(f"Infelizmente, a margem de desconto no seu salário exige o limite de 30%, e foi {porcentagem:.2f}%. Por favor, escolha uma opção mais em conta na próxima!")
+    time.sleep(1)
+    quit()
+else:
+    print(f"A sua compra poderá ser feita, pois descontará apenas {porcentagem:.2f}% do seu salário. A entrega chegará em poucos dias se aceitar agora.")
+
+while True:
+    asking = input("Deseja comprar? (sim/não)\nR: ").lower()
+    if asking == "sim":
+        print("Muito bem, a compra chegará em breve, obrigado pela preferência!")
+        break
+    elif asking == "não":
+        print("Até a próxima e volte sempre!")
+        break
+    else:
+        limpar()
+        print("Por favor, escolha uma opção válida!")
+
+
+time.sleep(1.5)
+print("FIM!")
