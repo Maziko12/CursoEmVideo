@@ -58,9 +58,9 @@ print('.')
 time.sleep(3)
 if porcentagem >= 31:
     time.sleep(3)
-    print(f'Infelizmente, a margem de desconto no seu salário exigiu o limite de 30%, e foi {porcentagem}%.\nPor favor, escolha uma opção mais em conta na próxima!')
+    print(f'Infelizmente, a margem de desconto no seu salário exigiu o limite de 30%, e foi {porcentagem:.2f}%.\nPor favor, escolha uma opção mais em conta na próxima!')
 else:
-    print(f'A sua compra poderá ser feita, pois descontará apenas {porcentagem}% do seu salário. A entrega chegará em poucos dias se aceitar agora.')
+    print(f'A sua compra poderá ser feita, pois descontará apenas {porcentagem:.2f}% do seu salário. A entrega chegará em poucos dias se aceitar agora.')
 time.sleep(2.7)
 asking = str(input('Deseja comprar?\nR: ')).lower()
 if porcentagem <= 30:
